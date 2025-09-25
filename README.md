@@ -1,4 +1,4 @@
-<h1>ALX-PROJECT-2</h1>
+<h1>Next.js Project Setup and Basics</h1>
 
 <h2>Project Description</h2>
 <p>
