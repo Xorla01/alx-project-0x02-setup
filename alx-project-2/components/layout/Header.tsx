@@ -1,7 +1,7 @@
 import { HeaderProps } from "@/interfaces";
 import React from "react";
 
-const Header: React.FC<HeaderProps> = ({ title = "", logo = "" }) => {
+const Header: React.FC<HeaderProps> = ({ title = "My Page", logo = "" }) => {
     return (
         <div>
             <h1>{title}</h1>
