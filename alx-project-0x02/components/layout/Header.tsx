@@ -10,11 +10,14 @@ const Header: React.FC<HeaderProps> = ({ title = "", logo = "", links = [] }) =>
                 <div>{logo}</div>
             </div>
 
-            <nav className="flex gap-2.5">{links.map((link)  => (
-                <Link key={link.href} href={link.href} className="hover:underline">
-                    {link.label}
+            <nav className="flex gap-2.5">
+                <Link href="/home" className="hover:underline">
+                    Home
                 </Link>
-                ))}
+
+                <Link href="/about" className="hover:underline">
+                    About
+                </Link>
             </nav>
         </header>
     );
