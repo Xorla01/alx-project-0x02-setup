@@ -4,7 +4,7 @@ import React from "react";
 const About: React.FC<AboutProps> = ({ title="" }) => {
         return (
         <div>
-            <h1 className="flex font-medium text-xl justify-center items-center p-10">Find everything about me here!</h1>
+            <h1 className="flex font-bold text-xl justify-center items-center p-10">Find everything about me here!</h1>
         </div>
     );
 }
