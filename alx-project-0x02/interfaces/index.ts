@@ -11,3 +11,8 @@ export interface HomeProps {
 export interface AboutProps {
     title?: string;
 }
+
+export interface CardProps {
+    title?: string;
+    content?: string;
+}
