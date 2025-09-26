@@ -3,8 +3,8 @@ import React from "react";
 
 const Home: React.FC<HomeProps> =({ title="" }) => {
     return (
-        <div className="flex flex-row gap-2">
-            <h1 className="font-medium text-xl">This is my homepage</h1>
+        <div>
+            <h1 className="flex font-bold text-xl justify-center items-center p-10">This is my homepage</h1>
         </div>
     );
 }
