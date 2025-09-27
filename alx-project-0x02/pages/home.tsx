@@ -39,14 +39,14 @@ const Home: React.FC<HomeProps> = ({ title = "" }) => {
         onSubmit={handleAddPost}
       />
 
-      <div className="mt-6 w-full max-w-md text-center">
+      <div className="mt-6 max-w-md w-full sm:w-[300px] md:w-[400px] lg:w-[500px] min-h-[200px] ">
         {posts.map((post, i) => (
           <div
             key={i}
             className="border p-4 rounded mb-4 hover:scale-105 transition-transform duration-300 ease-in-out"
           >
-            <h3 className="font-bold text-lg">{post.title}</h3>
-            <p>{post.content}</p>
+            <h3 className="font-bold text-lg break-words">{post.title}</h3>
+            <p className="break-words whitespace-normal">{post.content}</p>
           </div>
         ))}
       </div>
