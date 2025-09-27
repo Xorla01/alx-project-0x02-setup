@@ -3,55 +3,55 @@ import Card from "@/components/common/Card";
 import PostModal from "@/components/common/PostModal";
 import React, { useState } from "react";
 
-const Home: React.FC<HomeProps> =({ title="" }) => {
-    const [isModalOpen, setIsModalOpen] = useState(false);
-    const [posts, setPosts] = useState<{ title: String; content: string}[]>([]);
+const Home: React.FC<HomeProps> = ({ title = "" }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [posts, setPosts] = useState<{ title: string; content: string }[]>([]);
 
-    const handleAddPost = (post: { title: string; content: string }) => {
-        setPosts([...posts, post]);
-    };
+  const handleAddPost = (post: { title: string; content: string }) => {
+    setPosts([...posts, post]);
+  };
 
-    return (
-        <div className="flex flex-col gap-4 text-wrap">
-            <h1 className="font-bold text-2xl text-center">Feeds</h1>
+  return (
+    <div className="flex flex-col items-center p-4">
+      <h1 className="font-bold text-2xl text-center mb-6">Feeds</h1>
 
-            <div className="grid grid-cols-2 gap-10 m-6 p-2.5 justify-center items-center text-center">
-                <Card   
-                    title ="Card Type One"
-                    content="This card is rendered automatically on this Next.js app. Pleasee rate my first card."
-                />
-                    
-                <Card 
-                    title ="Card Type Two"
-                    content="This card is rendered automatically on this Next.js app. Pleasee rate my first card."
-                />
-            </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 m-6 p-2.5 text-center">
+        <Card
+          title="Card Type One"
+          content="This card is rendered automatically on this Next.js app. Please rate my first card."
+        />
+        <Card
+          title="Card Type Two"
+          content="This card is rendered automatically on this Next.js app. Please rate my first card."
+        />
+      </div>
 
-            <div className="p-4">
-                <button
-                    onClick={() => setIsModalOpen(true)}
-                    className="bg-green-500 text-white px-3 py-1 rounded"
-                >
-                    Add Post
-                </button>
+      <button
+        onClick={() => setIsModalOpen(true)}
+        className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
+      >
+        Add Post
+      </button>
 
-                <PostModal
-                    isOpen = {isModalOpen}
-                    onClose={() => setIsModalOpen(false)}
-                    onSubmit={handleAddPost}
-                />
+      <PostModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        onSubmit={handleAddPost}
+      />
 
-                <div className="mt-4">
-                    {posts.map((post, i) => (
-                        <div key={i} className="border p-2 rounded mb-2">
-                            <h3 className="font-bold">{post.title}</h3>
-                            <p>{post.content}</p>
-                        </div>
-                    ))}
-                </div>
-            </div>
-        </div>
-    );
-}
+      <div className="mt-6 w-full max-w-md text-center">
+        {posts.map((post, i) => (
+          <div
+            key={i}
+            className="border p-4 rounded mb-4 hover:scale-105 transition-transform duration-300 ease-in-out"
+          >
+            <h3 className="font-bold text-lg">{post.title}</h3>
+            <p>{post.content}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
 
 export default Home;

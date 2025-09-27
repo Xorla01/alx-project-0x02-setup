@@ -10,7 +10,7 @@ const Card: React.FC<CardProps> = ({ title = "", content = "" }) => {
         min-h-[200px]
         border-2 border-gray-500 rounded-md
         hover:scale-105 transition-transform duration-300 ease-in-out
-        shadow-md
+        shadow-md bg-zinc-300 
       "
     >
       <h3 className="font-bold text-[16px] text-center">
