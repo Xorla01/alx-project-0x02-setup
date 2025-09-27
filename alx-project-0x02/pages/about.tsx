@@ -13,8 +13,13 @@ const About: React.FC<AboutProps> = ({ title="" }) => {
                 Find everything about me here!
             </h1>
 
-           <div className="flex flex-col gap-4">
-                <Button label="About Me" size="small" shape="rounded-sm" onClick={handleSmallClick} />
+           <div className="flex flex-col gap-4 justify-center items-center">
+                <Button 
+                    label="About Me" 
+                    size="small" 
+                    shape="rounded-sm" 
+                    onClick={handleSmallClick} 
+                />
                 <Button label="About Me" size="medium" shape="rounded-md" onClick={handleMediumClick} />
                 <Button label="About Me" size="large" shape="rounded-full" onClick={handleLargeClick} />
            </div>

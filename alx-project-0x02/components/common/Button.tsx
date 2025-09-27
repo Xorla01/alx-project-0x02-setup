@@ -8,9 +8,9 @@ const Button: React.FC<ButtonProps> = ({
     onClick 
 }) => {
     const sizes = {
-        small: "px-2 py-1 text-sm",
-        medium: "px-4 py-2 text-md",
-        large: "px-6 py-3 text-lg"
+        small: "px-2 py-1 text-sm w-[200px]",
+        medium: "px-4 py-2 text-md w-[250px]",
+        large: "px-6 py-3 text-lg w-[300px]"
     };
 
     return (
