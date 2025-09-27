@@ -6,7 +6,7 @@ const Card: React.FC<CardProps> = ({ title = "", content = "" }) => {
     <div
       className="
         flex flex-col p-4 justify-center items-center gap-4
-        w-full sm:w-[250px] md:w-[300px] lg:w-[350px]
+        w-full sm:w-[200px] md:w-[270px] lg:w-[350px]
         min-h-[200px]
         border-2 border-gray-500 rounded-md
         hover:scale-105 transition-transform duration-300 ease-in-out
