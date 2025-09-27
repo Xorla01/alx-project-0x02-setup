@@ -1,4 +1,5 @@
-import { AboutProps } from "@/interfaces";
+import { type AboutProps } from "@/interfaces";
+import Header from "@/components/layout/Header";
 import Button from "@/components/common/Button";
 import React from "react";
 
@@ -9,10 +10,13 @@ const About: React.FC<AboutProps> = ({ title="" }) => {
 
         return (
         <div className="">
-            <h1 className="flex font-bold text-2xl justify-center items-center mb-4">
-                Find everything about me here!
-            </h1>
+            <Header title="My Next.js App" logo="🚀" />
 
+            <div className="p-6 space-y-4">
+                <h1 className="font-bold text-2xl justify-center items-center mb-4">About Page</h1>
+                <p>This is the about page.</p>
+            </div>
+            
            <div className="flex flex-col gap-4 justify-center items-center">
                 <Button 
                     label="About Me" 
@@ -20,8 +24,18 @@ const About: React.FC<AboutProps> = ({ title="" }) => {
                     shape="rounded-sm" 
                     onClick={handleSmallClick} 
                 />
-                <Button label="About Me" size="medium" shape="rounded-md" onClick={handleMediumClick} />
-                <Button label="About Me" size="large" shape="rounded-full" onClick={handleLargeClick} />
+                <Button 
+                    label="About the Page" 
+                    size="medium" 
+                    shape="rounded-md" 
+                    onClick={handleMediumClick} 
+                />
+                <Button 
+                    label="About the Page" 
+                    size="large" 
+                    shape="rounded-full" 
+                    onClick={handleLargeClick} 
+                />
            </div>
         </div>
     );

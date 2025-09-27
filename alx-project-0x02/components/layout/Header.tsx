@@ -1,4 +1,4 @@
-import { HeaderProps } from "@/interfaces";
+import { type HeaderProps } from "@/interfaces";
 import Link from "next/link";
 import React from "react";
 
@@ -17,6 +17,10 @@ const Header: React.FC<HeaderProps> = ({ title = "", logo = "", links = [] }) =>
 
                 <Link href="/about" className="hover:underline">
                     About
+                </Link>
+
+                <Link href="/posts" className="hover:underline">
+                    Posts
                 </Link>
             </nav>
         </header>
