@@ -23,7 +23,7 @@ const Header: React.FC<HeaderProps> = ({ title = "", logo = "", links = [] }) =>
                     Posts
                 </Link>
 
-                <Link href="/posts" className="hover:underline">
+                <Link href="/users" className="hover:underline">
                     Users
                 </Link>
             </nav>
