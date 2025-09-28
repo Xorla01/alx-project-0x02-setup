@@ -39,6 +39,6 @@ const About: React.FC<AboutProps> = ({ title="" }) => {
            </div>
         </div>
     );
-}
+};
 
 export default About;

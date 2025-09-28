@@ -30,3 +30,10 @@ export interface ButtonProps {
     type?: "button" | "submit" | "reset";
     onClick: () => void;
 }
+
+export interface PostProps {
+    userID: number;
+    title: string;
+    content: string;
+}
+
