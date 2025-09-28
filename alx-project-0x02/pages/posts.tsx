@@ -1,7 +1,6 @@
 import Header from "@/components/layout/Header";
 import PostCard from "@/components/common/PostCard";
 import { type PostProps } from "@/interfaces";
-import { title } from "process";
 
 export default function Posts({posts}: { posts: PostProps[] }) {
     return (
@@ -17,7 +16,7 @@ export default function Posts({posts}: { posts: PostProps[] }) {
                         {posts.map((post) => (
                             <PostCard 
                                 key={post.title}
-                                userID={post.userID}
+                                userId={post.userId}
                                 title={post.title}
                                 content={post.content}
                             />
@@ -34,7 +33,7 @@ export async function getStaticProps() {
     const data = await res.json();
 
     const posts = data.map((post: any) => ({
-        userID: post.userID,
+        userId: post.userId,
         title: post.title,
         content: post.body,
     }));

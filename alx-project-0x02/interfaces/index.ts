@@ -32,7 +32,7 @@ export interface ButtonProps {
 }
 
 export interface PostProps {
-    userID: number;
+    userId: number;
     title: string;
     content: string;
 }
