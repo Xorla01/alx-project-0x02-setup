@@ -12,7 +12,7 @@ export default function Users ({users}: { users: UserProps[] }) {
 
                 {users.length === 0 ? (
                     <p>No users available.</p>) : (
-                        <div>
+                        <div className="grid gap-4">
                             {users.map((user) => (
                                 <UserCard
                                     key={user.name}
@@ -29,19 +29,21 @@ export default function Users ({users}: { users: UserProps[] }) {
 }
 
 export async function getStaticProps() {
-    const res = await fetch("https://jsonplaceholder.typicode.com/users?_limit=10");
-    const data = await res.json();
+  const res = await fetch("https://jsonplaceholder.typicode.com/users?_limit=10");
+  const data = await res.json();
 
-    const users = data.map((user: any) => ({
-        name: user.name,
-        email: user.email,
-        address: `
-            ${user.address.street}, 
-            ${user.address.suite}, 
-            ${user.address.city} - ${user.address.zipcode}`,
-    }));
+  const users = data.map((user: any) => ({
+    name: user.name,
+    email: user.email,
+    address: {
+      street: user.address.street,
+      suite: user.address.suite,
+      city: user.address.city,
+      zipcode: user.address.zipcode,
+    },
+  }));
 
-    return {
-        props: { users }
-    };
+  return {
+    props: { users },
+  };
 }
