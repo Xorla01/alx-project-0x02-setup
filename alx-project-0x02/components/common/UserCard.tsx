@@ -4,10 +4,10 @@ import React from "react";
 const UserCard: React.FC<UserProps> = ({name, email, address}) => {
     return (
         <>
-            <div className="border rounded p-4 shadow">
+            <div className="border rounded p-4 shadow hover:scale-103 transition-transform duration-300">
                 <h3 className="font-bold text-lg ">Username: {name}</h3>
                 <p className="text-gray-500">Email: {email}</p>
-                
+
                 <div className="text-sm text-gray-500 mt-2">
                     <p>Street: {address.street}</p>
                     <p>Suite: {address.suite}</p>
