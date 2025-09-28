@@ -1,6 +1,7 @@
-import { HomeProps } from "@/interfaces";
+import { type HomeProps } from "@/interfaces";
 import Card from "@/components/common/Card";
 import PostModal from "@/components/common/PostModal";
+import Header from "@/components/layout/Header";
 import React, { useState } from "react";
 
 const Home: React.FC<HomeProps> = ({ title = "" }) => {
@@ -13,17 +14,19 @@ const Home: React.FC<HomeProps> = ({ title = "" }) => {
 
   return (
     <div className="flex flex-col items-center p-4">
-      <h1 className="font-bold text-2xl text-center mb-6">Feeds</h1>
+        <Header title="My Next.js App" logo="🚀" />
+        
+        <h1 className="font-bold text-2xl text-center mb-6">Feeds</h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 m-6 p-2.5 text-center">
-        <Card
-          title="Card Type One"
-          content="This card is rendered automatically on this Next.js app. Please rate my first card."
-        />
-        <Card
-          title="Card Type Two"
-          content="This card is rendered automatically on this Next.js app. Please rate my first card."
-        />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 m-6 p-2.5 text-center">
+            <Card
+            title="Card Type One"
+            content="This card is rendered automatically on this Next.js app. Please rate my first card."
+            />
+            <Card
+            title="Card Type Two"
+            content="This card is rendered automatically on this Next.js app. Please rate my first card."
+            />
       </div>
 
       <button
